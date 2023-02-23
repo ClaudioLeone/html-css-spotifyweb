@@ -30,7 +30,7 @@
     color: var(--grey-text);
 }
 
-section > h2{
+.sect-titles{
     font-size: 1rem;
 }
 
@@ -73,6 +73,13 @@ ul{
     color: var(--grey-text);
 }
 
+.navlinks > li > a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--grey-text);
+    margin: 5px 0;
+}
+
 .player{
     height: var(--player-height);
     width: 100%;
@@ -86,7 +93,28 @@ ul{
     height: 100%;
 
     /* debug */
-    background-color: cornflowerblue;
+    background-color: black;
+}
+
+.sidebar-content-container{
+    width: 100%;
+    margin: 10px 38px 10px 10px;
+    flex-direction: column;
+}
+
+.logo{
+    width: 60%;
+}
+
+.add-string{
+    width: 100%;
+    align-items: center;
+    
+}
+
+.navlinks{
+    width: 100%;
+    margin: 10px 38px 10px 0;
 }
 
 .content{
