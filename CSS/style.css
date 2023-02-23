@@ -10,6 +10,7 @@
     --grey-text: rgb(148, 148, 148);
     --sidebar-wdt: 150px;
     --player-height: 50px;
+    --cta-height: 80px;
 }
 
 /* UTILITIES */
@@ -168,6 +169,23 @@ ul{
     height: 80px;
     width: 100%;
     background-color: rgba(0,0,0,0.5)
+}
+
+.header-container{
+    height: var(--cta-height);
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-container > a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 0.6rem;
+    margin-right: 15px;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 25px;
 }
 
 .albums-list{
