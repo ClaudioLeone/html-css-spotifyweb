@@ -197,17 +197,10 @@ ul{
     margin: 20px;
     flex-direction: column;
     align-items: center;
-
-    /* debug */
-    border: 1px solid black;
 }
 
-.recently-played{
-
-}
-
-.selected-4-you{
-
+.rounded-img{
+    border-radius: 50%;
 }
 
 /* .header{
