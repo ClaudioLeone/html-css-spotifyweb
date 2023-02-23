@@ -9,7 +9,7 @@
 :root{
     --grey-text: rgb(148, 148, 148);
     --sidebar-wdt: 150px;
-    --player-height: 50px;
+    --player-height: 65px;
     --cta-height: 80px;
 }
 
@@ -38,6 +38,7 @@
 
 .sect-titles{
     font-size: 1rem;
+    margin-left: 20px;
 }
 
 .align-center{
@@ -101,16 +102,17 @@ ul{
 .player-container{
     height: var(--player-height);
     width: 100%;
-    justify-content: space-between;
     align-items: center;
 }
 
 .player-sections{
     align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    width: 150px;
-    margin: 0 0 0 10px
+    width: calc(100% / 3);
+}
+
+.player-left-container{
+    gap: 25px;
+    margin-left: 5px;
 }
 
 .player-left-sect{
@@ -120,6 +122,71 @@ ul{
 
 .player-left-sect > img{
     width: 30px;
+}
+
+.player-cntr-container{
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+.player-cntr-sect{
+    height: 100%;
+    flex-direction: column;
+}
+
+.player-cntr-actions{
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    gap: 25px;
+}
+
+.player-cntr-actions > i:nth-child(3){
+    font-size: 1.5rem;
+}
+
+.player-right-container{
+    justify-content: flex-end;
+    margin-right: 5px;
+}
+
+.player-right-actions{
+    align-items: center;
+    gap: 10px;
+}
+
+.player-icons{
+    color: rgb(209, 209, 209);
+    font-size: 0.7rem;
+}
+
+.play-bar-total{
+    height: 3px;
+    width: 100%;
+    background-color: #606060;
+    border-radius: 3px;
+}
+
+.play-bar-partial{
+    height: 3px;
+    width: 30%;
+    background-color: #aeaeae;
+    border-radius: 3px;
+}
+
+.vol-bar-total{
+    height: 3px;
+    width: 100px;
+    background-color: #606060;
+    border-radius: 3px;
+}
+
+.vol-bar-partial{
+    height: 3px;
+    width: 30px;
+    background-color: #aeaeae;
+    border-radius: 3px;
 }
 
 .artist-title{
