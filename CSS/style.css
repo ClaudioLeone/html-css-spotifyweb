@@ -5,6 +5,13 @@
     box-sizing: border-box;
 }
 
+/* VARIABLES */
+:root{
+    --grey-text: rgb(148, 148, 148);
+    --sidebar-wdt: 150px;
+    --player-height: 50px;
+}
+
 /* UTILITIES */
 .flex{
     display: flex;
@@ -16,6 +23,15 @@
 
 .sticky{
     position: sticky;
+}
+
+.albums > p{
+    font-size: 0.6rem;
+    color: var(--grey-text);
+}
+
+section > h2{
+    font-size: 1rem;
 }
 
 /* GENERAL */
@@ -38,11 +54,27 @@ body{
 }
 
 .main{
-    height: calc(100% - 50px);
+    height: calc(100% - var(--player-height));
+}
+
+.nav-list{
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+ul{
+    list-style-type: none;
+    font-size: 0.6rem;
+}
+
+.nav-list > li > a{
+    text-decoration: none;
+    color: var(--grey-text);
 }
 
 .player{
-    height: 50px;
+    height: var(--player-height);
     width: 100%;
 
     /* debug */
@@ -50,7 +82,7 @@ body{
 }
 
 .sidebar-left{
-    width: 200px;
+    width: var(--sidebar-wdt);
     height: 100%;
 
     /* debug */
@@ -58,12 +90,12 @@ body{
 }
 
 .content{
-    width: calc(100% - 200px);
+    width: calc(100% - var(--sidebar-wdt));
     height: 100%;
     overflow-y: auto;
     
     /* debug */
-    background-color: crimson;
+    background-color: #242424;
 }
 
 .cta{
@@ -79,15 +111,23 @@ body{
 }
 
 .albums{
-    width: calc(100% / 6  - 20px);
-    margin-top: 20px;
-    margin-right: 20px;
+    width: calc(100% / 6  - 40px);
+    margin: 20px;
     flex-direction: column;
     align-items: center;
 
     /* debug */
     border: 1px solid black;
 }
+
+.recently-played{
+
+}
+
+.selected-4-you{
+
+}
+
 /* .header{
     flex-direction: column;
 } */
