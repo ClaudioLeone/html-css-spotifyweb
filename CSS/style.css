@@ -365,14 +365,20 @@ ul{
     border-radius: 50%;
 }
 
-@media screen and(max-width: 1100) {
-    
+@media screen and (max-width: 700px) {
+    .albums{
+        width: calc(100% / 4 - 20px);
+    }
 }
 
-@media screen and(max-width: 700) {
-    
-}
+@media screen and (max-width: 600px) {
+    .albums{
+        width: calc(100% / 2 - 20px);
+    }
 
-@media screen and(max-width: 600) {
-    
+    .favs{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
 }
