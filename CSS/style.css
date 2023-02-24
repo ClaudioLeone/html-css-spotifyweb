@@ -9,6 +9,7 @@
 :root{
     --grey-text: rgb(148, 148, 148);
     --sidebar-wdt: 150px;
+    --sidebar-wdt-small: 50px;
     --player-height: 65px;
     --cta-height: 80px;
     --playbar-margin: 10px;
@@ -25,6 +26,10 @@
 
 .sticky{
     position: sticky;
+}
+
+.white{
+    color: white;
 }
 
 .albums > p{
@@ -72,7 +77,8 @@ body{
 .nav-list{
     justify-content: center;
     gap: 15px;
-    margin: 15px 0;
+    margin: 15px 0 25px;
+    flex-wrap: wrap;
 }
 
 ul{
@@ -90,6 +96,10 @@ ul{
     text-decoration: none;
     color: var(--grey-text);
     margin: 5px 0;
+}
+
+.navlinks i{
+    margin-right: 5px;
 }
 
 .player{
@@ -277,6 +287,10 @@ ul{
     width: 60%;
 }
 
+.sidebar-content-container .logo:nth-child(2){
+    display: none;
+}
+
 .add-string{
     width: 100%;
     align-items: center;
@@ -291,13 +305,9 @@ ul{
 .navlinks > li:first-child{
     border-left: 2px solid lime;
     width: var(--sidebar-wdt);
-    position: absolute;
-    left: 0;
+    position: relative;
+    left: -10px;
     padding-left: 8px;
-}
-
-.navlinks > li:nth-child(2){
-    margin-top: 21px;
 }
 
 .content{
@@ -365,6 +375,8 @@ ul{
     border-radius: 50%;
 }
 
+
+
 @media screen and (max-width: 700px) {
     .albums{
         width: calc(100% / 4 - 20px);
@@ -380,5 +392,65 @@ ul{
         display: flex;
         flex-direction: column;
         gap: 5px;
+    }
+
+    .sidebar-left{
+        width: var(--sidebar-wdt-small);
+    }
+
+    .sidebar-content-container{
+        align-items: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    .content{
+        width: calc(100% - var(--sidebar-wdt-small));
+    }
+
+    .navlinks span{
+        display: none;
+    }
+
+    .navlinks > li{
+        width: var(--sidebar-wdt-small);
+        text-align: center;
+        margin-left: 22px;
+        font-size: 0.8rem;
+    }
+
+    .navlinks > li:first-child{
+        width: var(--sidebar-wdt-small);
+        padding-left: 2px;
+        text-align: center;
+        margin-left: 0;
+        left: 19px;
+    }
+
+    .sidebar-content-container .logo:nth-child(2){
+        display: inline-block;
+        margin-top: 10px;
+        width: 50%;
+    }
+
+    .sidebar-content-container > .logo{
+        display: none;
+    }
+
+    .sidebar-content-container h6, .add-sect, .add-list, .paragraphs-text span, .hr-style{
+        display: none;
+    }
+
+    .sidebar-bottom-content > .paragraphs-text {
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .albums > h5 {
+        font-size: 0.75rem;
+    }
+
+    .albums > p{
+        font-size: 0.65rem;
     }
 }
