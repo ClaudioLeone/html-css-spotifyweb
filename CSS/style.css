@@ -11,6 +11,7 @@
     --sidebar-wdt: 150px;
     --player-height: 65px;
     --cta-height: 80px;
+    --playbar-margin: 10px;
 }
 
 /* UTILITIES */
@@ -38,7 +39,7 @@
 
 .sect-titles{
     font-size: 1rem;
-    margin-left: 20px;
+    color: white;
 }
 
 .align-center{
@@ -161,11 +162,22 @@ ul{
     font-size: 0.7rem;
 }
 
+.play-bar-container{
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.play-bar-container h6{
+    font-size: 0.45rem;
+}
+
 .play-bar-total{
     height: 3px;
     width: 100%;
     background-color: #606060;
     border-radius: 3px;
+    margin: 0 var(--playbar-margin);
 }
 
 .play-bar-partial{
@@ -276,6 +288,18 @@ ul{
     margin: 10px 38px 10px 0;
 }
 
+.navlinks > li:first-child{
+    border-left: 2px solid lime;
+    width: var(--sidebar-wdt);
+    position: absolute;
+    left: 0;
+    padding-left: 8px;
+}
+
+.navlinks > li:nth-child(2){
+    margin-top: 21px;
+}
+
 .content{
     width: calc(100% - var(--sidebar-wdt));
     height: 100%;
@@ -308,37 +332,47 @@ ul{
     border-radius: 25px;
 }
 
+.recently-played > h2{
+    margin-left: 10px;
+}
+
 .albums-list{
     flex-wrap: wrap;
 }
 
 .albums{
-    width: calc(100% / 6  - 40px);
-    margin: 20px;
+    width: calc(100% / 6 - 20px);
+    margin: 20px 10px;
+    gap: 5px;
     flex-direction: column;
     align-items: center;
+}
+
+.albums > h5{
+    font-size: 0.6rem;
+}
+
+.sect-titles-container  > p{
+    font-size: 0.6rem;
+    color: var(--grey-text);
+}
+
+.selected-4-you, .popular-artists{
+    margin-left: 10px;
 }
 
 .rounded-img{
     border-radius: 50%;
 }
 
-/* .header{
-    flex-direction: column;
-} */
-
-/* .topbar{
-    background-color: yellow;
-    width: 100%;
-    height: 100px;
-} */
-
-/* .navbar{
-    width: calc(100% - 200px);
-    height: 80px;
-    background-color: violet;
+@media screen and(max-width: 1100) {
+    
 }
 
-.recent-play{
-    margin-top: 180px;
-} */
+@media screen and(max-width: 700) {
+    
+}
+
+@media screen and(max-width: 600) {
+    
+}
