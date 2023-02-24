@@ -32,11 +32,6 @@
     color: white;
 }
 
-.albums > p{
-    font-size: 0.6rem;
-    color: var(--grey-text);
-}
-
 .paragraphs-text{
     font-size: 0.6rem;
     color: var(--grey-text);
@@ -65,9 +60,6 @@ body{
 .wrapper{
     width: 100%;
     height: 100vh;
-
-    /* debug */ 
-    background-color: salmon;
 }
 
 .main{
@@ -105,8 +97,6 @@ ul{
 .player{
     height: var(--player-height);
     width: 100%;
-
-    /* debug */
     background-color: #2c2c2c;
 }
 
@@ -223,8 +213,6 @@ ul{
 .sidebar-left{
     width: var(--sidebar-wdt);
     height: 100%;
-
-    /* debug */
     background-color: black;
 }
 
@@ -358,6 +346,11 @@ ul{
     align-items: center;
 }
 
+.albums > p{
+    font-size: 0.6rem;
+    color: var(--grey-text);
+}
+
 .albums > h5{
     font-size: 0.6rem;
 }
@@ -374,8 +367,6 @@ ul{
 .rounded-img{
     border-radius: 50%;
 }
-
-
 
 @media screen and (max-width: 700px) {
     .albums{
